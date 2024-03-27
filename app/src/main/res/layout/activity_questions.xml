@@ -16,6 +16,7 @@
         android:padding="16dp">
 
         <TextView
+            android:id="@+id/tvQuestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
@@ -28,7 +29,7 @@
             android:id="@+id/iv_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/haaland"
+            android:contentDescription="@string/image_for_question"
             android:layout_marginTop="16dp"
             android:adjustViewBounds="true"
             tools:text="image for question"
@@ -58,11 +59,64 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="16dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="16dp"
                 tools:text="0/10"
                 android:textSize="16sp"/>
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvOption1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center"
+            android:padding="16dp"
+            tools:text="Option 1"
+            android:background="@drawable/rectangle"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvOption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center"
+            android:padding="16dp"
+            tools:text="Option 1"
+            android:background="@drawable/rectangle"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/tvOption3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center"
+            android:padding="16dp"
+            tools:text="Option 1"
+            android:background="@drawable/rectangle"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/tvOption4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center"
+            android:padding="16dp"
+            tools:text="Option 1"
+            android:background="@drawable/rectangle"
+            android:layout_marginTop="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="S U B M I T"
+            android:padding="16dp"
+            app:cornerRadius="8dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/darkest"
+            />
 
     </LinearLayout>
 
