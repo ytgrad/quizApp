@@ -3,4 +3,8 @@
     <string name="quiz_app">Quiz App</string>
     <string name="welcome">Welcome!</string>
     <string name="enterName">Please enter your name.</string>
+    <string name="name">name</string>
+    <string name="submit">Submit</string>
+    <string name="start">START</string>
+    <string name="haaland">Haaland</string>
 </resources>
