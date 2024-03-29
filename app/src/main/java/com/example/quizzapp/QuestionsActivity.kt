@@ -1,12 +1,11 @@
 package com.example.quizzapp
 
+import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.quizzapp.databinding.ActivityQuestionsBinding
 
@@ -15,8 +14,11 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var currentPosition = 1
     private var questionsList:ArrayList<Question>? = null
     private var selectedOption = 0
+    private var correctAnswers = 0
+    private var userName : String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        userName = intent.getStringExtra(Constants.USER_NAME)
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -89,13 +91,21 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
                                     selectQuestion()
                             }
                             else -> {
-                                Toast.makeText(this, "finished", Toast.LENGTH_SHORT).show()
+
+                                val intent = Intent(this, ResultActivity::class.java)
+                                intent.putExtra(Constants.USER_NAME, userName)
+                                intent.putExtra(Constants.CORRECT_ANSWERS, correctAnswers)
+                                intent.putExtra(Constants.TOTAL_QUESTIONS, questionsList!!.size)
+                                startActivity(intent)
+                                finish()
                             }
                         }
                     }else{
                         val question = questionsList?.get(currentPosition - 1)
                         if(question!!.correctAns != selectedOption){
                             setOptionsColor(selectedOption, R.drawable.rectangle_incorrect)
+                        }else{
+                            correctAnswers++
                         }
                         setOptionsColor(question.correctAns, R.drawable.rectangle_correct)
                         selectedOption = 0

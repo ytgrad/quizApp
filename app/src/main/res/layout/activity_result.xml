@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/lighter"
+    android:padding="20dp"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/darkest"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/trophy"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/trophy"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/congratulations"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/egyptianBlue"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkest"
+        tools:text="Shiv"
+        android:gravity="center"
+        android:layout_margin="32dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/darker"
+        android:text="@string/your_final_score_is"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkest"
+        android:gravity="center"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
+        android:text="@string/f_i_n_i_s_h"
+        android:textSize="16sp"
+        android:backgroundTint="@color/egyptianBlue"
+        android:textColor="@color/lighter"
+        app:cornerRadius="10dp"/>
+
+
+</LinearLayout>

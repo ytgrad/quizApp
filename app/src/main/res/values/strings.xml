@@ -8,4 +8,9 @@
     <string name="start">START</string>
     <string name="haaland">Haaland</string>
     <string name="image_for_question">image for question</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="trophy">trophy</string>
+    <string name="result">Result</string>
+    <string name="your_final_score_is">Your final score is:</string>
+    <string name="f_i_n_i_s_h">F I N I S H</string>
 </resources>
